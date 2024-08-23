@@ -1,0 +1,6 @@
+{
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "name": "Ubuntu 22.04"
+}
