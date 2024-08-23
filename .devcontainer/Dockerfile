@@ -1,7 +1,6 @@
 FROM ubuntu:22.04
 
 RUN \
-  update-ca-certificates -f && \
   wget -nv https://github.com/Kitware/CMake/releases/download/v3.30.2/cmake-3.30.2-linux-x86_64.sh && \
   chmod +x ./cmake-3.30.2-linux-x86_64.sh && \
   ./cmake-3.30.2-linux-x86_64.sh --prefix=/usr/local --skip-license && \
