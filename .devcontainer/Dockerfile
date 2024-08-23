@@ -20,7 +20,7 @@ RUN \
   ./cmake-3.30.2-linux-x86_64.sh --prefix=/usr/local --skip-license && \
   rm -f cmake-3.30.2-linux-x86_64.sh && \
   wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc && \
-  echo "deb http://apt.llvm.org/bookworm/ llvm-toolchain-bookworm-18 main" > /etc/apt/sources.list.d/llvm-toolchain-bookworm-18.list && \
+  echo "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy main" > /etc/apt/sources.list.d/llvm-toolchain-jammy-18.list && \
   DEBIAN_FRONTEND=noninteractive apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y \
     clang-18 \
