@@ -25,6 +25,10 @@ RUN \
   DEBIAN_FRONTEND=noninteractive apt-get install -y \
     clang-18 \
     clang-tools-18 && \
+  wget -nv https://github.com/ninja-build/ninja/releases/download/v1.12.1/ninja-linux.zip && \
+  unzip ninja-linux.zip && \
+  mv ninja /usr/local/bin/ninja && \
+  rm -rf ninja-linux.zip && \
   git clone https://github.com/rui314/mold && \
   cd mold && \
   git checkout v2.33.0 && \
