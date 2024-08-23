@@ -1,10 +1,6 @@
 FROM ubuntu:22.04
 
 RUN \
-  wget -nv https://github.com/Kitware/CMake/releases/download/v3.30.2/cmake-3.30.2-linux-x86_64.sh && \
-  chmod +x ./cmake-3.30.2-linux-x86_64.sh && \
-  ./cmake-3.30.2-linux-x86_64.sh --prefix=/usr/local --skip-license && \
-  rm -f cmake-3.30.2-linux-x86_64.sh && \
   DEBIAN_FRONTEND=noninteractive apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y \
     autoconf \
@@ -17,7 +13,12 @@ RUN \
     git \
     pkg-config \
     unzip \
+    wget \
     zip && \
+  wget -nv https://github.com/Kitware/CMake/releases/download/v3.30.2/cmake-3.30.2-linux-x86_64.sh && \
+  chmod +x ./cmake-3.30.2-linux-x86_64.sh && \
+  ./cmake-3.30.2-linux-x86_64.sh --prefix=/usr/local --skip-license && \
+  rm -f cmake-3.30.2-linux-x86_64.sh && \
   wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc && \
   echo "deb http://apt.llvm.org/bookworm/ llvm-toolchain-bookworm-18 main" > /etc/apt/sources.list.d/llvm-toolchain-bookworm-18.list && \
   DEBIAN_FRONTEND=noninteractive apt-get update && \
