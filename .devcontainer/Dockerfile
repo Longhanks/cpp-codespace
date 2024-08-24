@@ -10,6 +10,7 @@ RUN \
     libc6-dev \
     libtool \
     curl \
+    gdb \
     git \
     pkg-config \
     unzip \
