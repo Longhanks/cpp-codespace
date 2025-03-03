@@ -2,7 +2,7 @@
   "build": {
     "dockerfile": "./Dockerfile"
   },
-  "name": "Ubuntu 22.04",
+  "name": "Alpine",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": "false",
@@ -10,12 +10,7 @@
       "userUid": "1000",
       "userGid": "1000",
       "upgradePackages": "false"
-    },
-    "ghcr.io/devcontainers/features/git:1": {
-      "version": "latest",
-      "ppa": "true"
-    },
-    "ghcr.io/devcontainers/features/git-lfs:1": {}
+    }
   },
   "runArgs": [
     "--cap-add=SYS_PTRACE",
