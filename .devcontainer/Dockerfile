@@ -10,6 +10,7 @@ RUN \
     git \
     libc++-dev \
     libc++-static \
+    linux-headers \
     llvm19 \
     llvm-libunwind-static \
     mold \
