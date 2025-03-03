@@ -7,6 +7,7 @@ RUN \
     clang19-extra-tools \
     compiler-rt \
     cmake \
+    gdb \
     git \
     libc++-dev \
     libc++-static \
