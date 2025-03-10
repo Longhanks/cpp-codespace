@@ -14,6 +14,7 @@ RUN \
     linux-headers \
     llvm19 \
     llvm-libunwind-static \
+    llvm-runtimes \
     mold \
     musl-dev \
     patch \
