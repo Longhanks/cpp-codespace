@@ -3,8 +3,8 @@ FROM alpine:latest
 RUN \
   apk update && \
   apk --no-cache add \
-    clang19 \
-    clang19-extra-tools \
+    clang20 \
+    clang20-extra-tools \
     compiler-rt \
     cmake \
     gdb \
@@ -12,7 +12,7 @@ RUN \
     libc++-dev \
     libc++-static \
     linux-headers \
-    llvm19 \
+    llvm20 \
     llvm-libunwind-static \
     llvm-runtimes \
     mold \
